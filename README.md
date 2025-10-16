@@ -113,10 +113,11 @@ Each chiplet class in `chiplet-library/` extends a `base_chiplet` model implemen
 CASCADE/
 │
 ├── dse/
-│   ├── run.sh                     # main entry point for experiments
-│   ├── test_system_eval.py        # core evaluation script
 │   ├── chiplet-library/           # analytical chiplet models
-│   └── experiments/               # experiment configurations (JSON)
+│   |── experiments/               # experiment configurations (JSON)
+│   ├── lib                        # cascade simulation files
+│   ├── test_system_eval.py        # core evaluation script
+│   └── run.sh                     # main entry point for experiments
 │
 ├── traces/                        # workload traces (LLM, StableDiffusion, GCN, ResNet, etc.)
 └── README.md                      # this file
