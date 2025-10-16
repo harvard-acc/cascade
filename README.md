@@ -1,4 +1,5 @@
 # CASCADE: A Composable Analytical System of Chiplets for AI Devices at the Edge
+## Democratizing Customization for ML at the Edge through Hetero-Chiplet SiP Architectures
 
 **Authors:** Matthew Joseph Adiletta, Gu-Yeon Wei, and David Brooks  
 **Affiliation:** Harvard University, Paulson School of Engineering and Applied Sciences  
@@ -19,7 +20,7 @@ CASCADE captures the **performance, bandwidth, and energy trade-offs** in multi-
 ## Features
 
 - **Analytical chiplet performance models**  
-  Compute and data-movement models based on roofline bounds calibrated to real hardware (e.g., NVIDIA A100, Ethos-U65).
+  Compute and data-movement models based on kernel specific roofline bounds calibrated to real hardware.
 
 - **Composable chiplet menu**  
   GPU, Convolution, Sparse, and Attention chiplets, each extending a shared analytical base model.
@@ -90,9 +91,10 @@ Chiplet types are set in the Python configuration file (e.g., `test_system_eval.
 
 ```python
 # Hyperparameters for chiplet selection
-GPU     = 12
+# Specify a hub-and-spoke system with 6 GPU chiplets and 6 Sparse Chiplets
+GPU     = 6
 ATTEN   = 0
-SPARSE  = 0
+SPARSE  = 6
 CONV    = 0
 ```
 
@@ -116,7 +118,7 @@ CASCADE/
 │   ├── chiplet-library/           # analytical chiplet models
 │   └── experiments/               # experiment configurations (JSON)
 │
-├── traces/                        # workload traces (LLM, CV, GNN, etc.)
+├── traces/                        # workload traces (LLM, StableDiffusion, GCN, ResNet, etc.)
 └── README.md                      # this file
 ```
 
@@ -163,10 +165,3 @@ This repository is provided for **research and educational use** in alignment wi
 All rights to the underlying models, figures, and results are reserved © 2025 IEEE and the authors.
 
 ---
-
-## Contact
-
-**Lead Author:**  
-Matthew Joseph Adiletta  
-Harvard University SEAS  
-📧 [madiletta@g.harvard.edu](mailto:madiletta@g.harvard.edu)
