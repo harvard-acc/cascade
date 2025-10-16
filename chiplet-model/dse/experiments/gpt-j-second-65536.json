@@ -1,0 +1,11 @@
+{
+    "workloads": [
+        {
+            "model": "gpt",
+            "model-instance": "gpt-j-second",
+            "batch-size": 65536,
+            "weighted_score": 1
+        }
+    ],
+    "optimization-goal": "latency"
+}

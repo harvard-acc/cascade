@@ -1,0 +1,174 @@
+{
+    "model": "dlrm",
+    "model_instance": "rmc2",
+    "batch_size": 1024,
+    "workload_trace": [
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 1024,
+                "hidden-dim": 256,
+                "params": 262144,
+                "non-zeros": 262144
+            },
+            "output": {
+                "batch-size": 1024,
+                "output-dim": 120
+            },
+            "layer": {
+                "hidden-dim": 256,
+                "output-dim": 120,
+                "params": 30840
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 122880
+            },
+            "output": {
+                "elements": 122880
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 1024,
+                "hidden-dim": 120,
+                "params": 122880,
+                "non-zeros": 61664
+            },
+            "output": {
+                "batch-size": 1024,
+                "output-dim": 64
+            },
+            "layer": {
+                "hidden-dim": 120,
+                "output-dim": 64,
+                "params": 7744
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 65536
+            },
+            "output": {
+                "elements": 65536
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "EmbeddingTable",
+            "input": {
+                "batch-size": 1024,
+                "num-tables": 100,
+                "num-lookups": 100,
+                "params": 10240000,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 1024,
+                "num-tables": 100,
+                "num-lookups": 100,
+                "embedding-dim": 64
+            },
+            "layer": {
+                "num-tables": 100,
+                "embedding-dim": 64,
+                "entries-per-table": 1000000.0,
+                "params": 6400000
+            }
+        },
+        {
+            "kernel": "InteractionArch",
+            "input": {
+                "batch-size": 1024,
+                "dense-features": 64,
+                "num-tables": 100,
+                "embedding-dim": 64,
+                "params": 6619136
+            },
+            "output": {
+                "batch-size": 1024,
+                "flat-diag-lower-dense": 5114
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 1024,
+                "hidden-dim": 5114,
+                "params": 5236736,
+                "non-zeros": 5206107
+            },
+            "output": {
+                "batch-size": 1024,
+                "output-dim": 512
+            },
+            "layer": {
+                "hidden-dim": 5114,
+                "output-dim": 512,
+                "params": 2618880
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 524288
+            },
+            "output": {
+                "elements": 524288
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 1024,
+                "hidden-dim": 512,
+                "params": 524288,
+                "non-zeros": 261965
+            },
+            "output": {
+                "batch-size": 1024,
+                "output-dim": 128
+            },
+            "layer": {
+                "hidden-dim": 512,
+                "output-dim": 128,
+                "params": 65664
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 131072
+            },
+            "output": {
+                "elements": 131072
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 1024,
+                "hidden-dim": 128,
+                "params": 131072,
+                "non-zeros": 64819
+            },
+            "output": {
+                "batch-size": 1024,
+                "output-dim": 1
+            },
+            "layer": {
+                "hidden-dim": 128,
+                "output-dim": 1,
+                "params": 129
+            }
+        }
+    ]
+}

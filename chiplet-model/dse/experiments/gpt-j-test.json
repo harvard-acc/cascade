@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "gpt",
+            "model-instance": "gpt-j-first",
+            "batch-size": 1
+        }
+    ],
+    "optimization-goal": "latency"
+}

@@ -1,0 +1,166 @@
+{
+    "model": "gcn",
+    "model_instance": "ogbn-arxiv",
+    "batch_size": 1024,
+    "workload_trace": [
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 169343,
+                "hidden-dim": 128,
+                "params": 21675904,
+                "non-zeros": 21675862
+            },
+            "output": {
+                "batch-size": 169343,
+                "output-dim": 1024
+            },
+            "layer": {
+                "hidden-dim": 128,
+                "output-dim": 1024,
+                "params": 131072
+            }
+        },
+        {
+            "kernel": "GCNConv",
+            "input": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "curve-fit-vals": {
+                    "1": [
+                        [
+                            394.9588083169758,
+                            0.5782114952474471,
+                            -10.144206608474557,
+                            0.13372330948541375,
+                            102.56169208870766
+                        ]
+                    ]
+                },
+                "embedding-dim": 1024
+            },
+            "output": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "embedding-dim": 1024
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 173407232
+            },
+            "output": {
+                "elements": 173407232
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 169343,
+                "hidden-dim": 1024,
+                "params": 173407232,
+                "non-zeros": 88439661
+            },
+            "output": {
+                "batch-size": 169343,
+                "output-dim": 1024
+            },
+            "layer": {
+                "hidden-dim": 1024,
+                "output-dim": 1024,
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "GCNConv",
+            "input": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "curve-fit-vals": {
+                    "1": [
+                        [
+                            394.9588083169758,
+                            0.5782114952474471,
+                            -10.144206608474557,
+                            0.13372330948541375,
+                            102.56169208870766
+                        ]
+                    ]
+                },
+                "embedding-dim": 1024
+            },
+            "output": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "embedding-dim": 1024
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 173407232
+            },
+            "output": {
+                "elements": 173407232
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 169343,
+                "hidden-dim": 1024,
+                "params": 173407232,
+                "non-zeros": 86934809
+            },
+            "output": {
+                "batch-size": 169343,
+                "output-dim": 40
+            },
+            "layer": {
+                "hidden-dim": 1024,
+                "output-dim": 40,
+                "params": 40960
+            }
+        },
+        {
+            "kernel": "GCNConv",
+            "input": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "curve-fit-vals": {
+                    "1": [
+                        [
+                            394.9588083169758,
+                            0.5782114952474471,
+                            -10.144206608474557,
+                            0.13372330948541375,
+                            102.56169208870766
+                        ]
+                    ]
+                },
+                "embedding-dim": 40
+            },
+            "output": {
+                "num-nodes": 169342,
+                "num-edges": 1335586,
+                "embedding-dim": 40
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Softmax",
+            "input": {
+                "elements": 6773720
+            },
+            "output": {
+                "elements": 6773720
+            },
+            "layer": {}
+        }
+    ]
+}

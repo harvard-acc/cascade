@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "dlrm",
+            "model-instance": "rmc3",
+            "batch-size": 512
+        }
+    ],
+    "optimization-goal": "latency"
+}

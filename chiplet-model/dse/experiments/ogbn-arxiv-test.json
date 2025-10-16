@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "gcn",
+            "model-instance": "ogbn-arxiv",
+            "batch-size": 256
+        }
+    ],
+    "optimization-goal": "latency"
+}

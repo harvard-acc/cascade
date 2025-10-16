@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "sd",
+            "model-instance": "stable-diffusion-v1-4",
+            "batch-size": 1024
+        }
+    ],
+    "optimization-goal": "latency"
+}

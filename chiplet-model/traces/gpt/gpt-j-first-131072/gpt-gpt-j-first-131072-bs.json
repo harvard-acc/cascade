@@ -1,0 +1,114 @@
+{
+    "model": "gpt",
+    "model_instance": "gpt-j",
+    "batch_size": 131072,
+    "workload_trace": [
+        {
+            "kernel": "Attention",
+            "input": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096,
+                "kv_cache": 0,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096
+            },
+            "layer": {
+                "hidden-dim": 4096,
+                "output-dim": 4096,
+                "num-heads": 16,
+                "params": 16777216
+            }
+        },
+        {
+            "kernel": "LayerNorm",
+            "input": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096
+            },
+            "output": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096
+            },
+            "layer": {
+                "weights": 8192,
+                "params": 8192
+            }
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 131072,
+                "hidden-dim": 4096,
+                "params": 16777216,
+                "non-zeros": 4194304
+            },
+            "output": {
+                "batch-size": 131072,
+                "output-dim": 16384
+            },
+            "layer": {
+                "hidden-dim": 4096,
+                "output-dim": 16384,
+                "params": 67125248
+            }
+        },
+        {
+            "kernel": "GeLU",
+            "input": {
+                "elements": 2147483648
+            },
+            "output": {
+                "elements": 2147483648
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 131072,
+                "hidden-dim": 16384,
+                "params": 67108864,
+                "non-zeros": 16776845
+            },
+            "output": {
+                "batch-size": 131072,
+                "output-dim": 4096
+            },
+            "layer": {
+                "hidden-dim": 16384,
+                "output-dim": 4096,
+                "params": 67112960
+            }
+        },
+        {
+            "kernel": "LayerNorm",
+            "input": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096
+            },
+            "output": {
+                "batch-size": 1,
+                "beam-size": 0,
+                "seq-len": 131072,
+                "hidden-dim": 4096
+            },
+            "layer": {
+                "weights": 8192,
+                "params": 8192
+            }
+        }
+    ]
+}

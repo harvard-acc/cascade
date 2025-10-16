@@ -1,0 +1,3514 @@
+{
+    "model": "dnn",
+    "model_instance": "resnet50",
+    "batch_size": 16,
+    "workload_trace": [
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 3,
+                "img-height": 224,
+                "img-width": 224,
+                "params": 2408448,
+                "non-zeros": 2395248
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 112,
+                "img-width": 112
+            },
+            "layer": {
+                "in-channels": 3,
+                "out-channels": 64,
+                "kernel": [
+                    7,
+                    7
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    3,
+                    3
+                ],
+                "params": 9408
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 112,
+                "img-width": 112,
+                "params": 12845056,
+                "non-zeros": 12845056
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 112,
+                "img-width": 112
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 12845056
+            },
+            "output": {
+                "elements": 12845056
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "MaxPool2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 112,
+                "img-width": 112,
+                "params": 12845056,
+                "non-zeros": 7063255
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "params": 0
+            }
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 2530167
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 64,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 4096
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1530170
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 64,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 36864
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1630369
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 12845056
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 2530167,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 12845056
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "Add",
+            "input": {
+                "elements": 25690112
+            },
+            "output": {
+                "elements": 25690112
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 12845056
+            },
+            "output": {
+                "elements": 12845056
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 6278481
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 64,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1733858
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 64,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 36864
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1512291
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 12845056
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 12845056
+            },
+            "output": {
+                "elements": 12845056
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 7734740
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 64,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1372195
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 64,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 36864
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 64,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 128,
+                "params": 128
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 64,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 3211264,
+                "non-zeros": 1634796
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 64,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 16384
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 12845056
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 12845056
+            },
+            "output": {
+                "elements": 12845056
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 8494577
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 128,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 32768
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 56,
+                "img-width": 56
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 6422528,
+                "non-zeros": 3521867
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 128,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 147456
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 708389
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 56,
+                "img-width": 56,
+                "params": 12845056,
+                "non-zeros": 8494577,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 131072
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "Add",
+            "input": {
+                "elements": 12845056
+            },
+            "output": {
+                "elements": 12845056
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 3260275
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 128,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 691070
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 128,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 147456
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 780839
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 4136857
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 128,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 809144
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 128,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 147456
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 675381
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 4253581
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 128,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 745579
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 128,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 147456
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 128,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 256,
+                "params": 256
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 128,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 1605632,
+                "non-zeros": 807207
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 128,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 65536
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 6422528
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 4203116
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 131072
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 28,
+                "img-width": 28
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 3211264,
+                "non-zeros": 1450390
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 402192
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 28,
+                "img-width": 28,
+                "params": 6422528,
+                "non-zeros": 4203116,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 524288
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "Add",
+            "input": {
+                "elements": 6422528
+            },
+            "output": {
+                "elements": 6422528
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 1702933
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 366668
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 384997
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2020639
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 393270
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 415948
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2034647
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 367500
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 390080
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2158879
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 402158
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 436894
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2075401
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 256,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 407511
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 256,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 589824
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 802816
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 256,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 512,
+                "params": 512
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 802816
+            },
+            "output": {
+                "elements": 802816
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 256,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 802816,
+                "non-zeros": 419037
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 256,
+                "out-channels": 1024,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 262144
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 3211264
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 1024,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 2048,
+                "params": 2048
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2081847
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 524288
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 14,
+                "img-width": 14
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 1605632,
+                "non-zeros": 791162
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 512,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 2359296
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 401408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 401408
+            },
+            "output": {
+                "elements": 401408
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 204621
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 2048,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 4096,
+                "params": 4096
+            }
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 1024,
+                "img-height": 14,
+                "img-width": 14,
+                "params": 3211264,
+                "non-zeros": 2081847,
+                "uncached": true
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 1024,
+                "out-channels": 2048,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    2,
+                    2
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 2097152
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 4096,
+                "params": 4096
+            }
+        },
+        {
+            "kernel": "Add",
+            "input": {
+                "elements": 3211264
+            },
+            "output": {
+                "elements": 3211264
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 783661
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 2048,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 401408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 401408
+            },
+            "output": {
+                "elements": 401408
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 200771
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 512,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 2359296
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 401408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 401408
+            },
+            "output": {
+                "elements": 401408
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 199671
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 2048,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 4096,
+                "params": 4096
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1001872
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 2048,
+                "out-channels": 512,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 401408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 401408
+            },
+            "output": {
+                "elements": 401408
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 204163
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 512,
+                "kernel": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ],
+                "params": 2359296
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 401408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 512,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 1024,
+                "params": 1024
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 401408
+            },
+            "output": {
+                "elements": 401408
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "Conv2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 512,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 401408,
+                "non-zeros": 202763
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "in-channels": 512,
+                "out-channels": 2048,
+                "kernel": [
+                    1,
+                    1
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    0,
+                    0
+                ],
+                "params": 1048576
+            }
+        },
+        {
+            "kernel": "BatchNorm",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1605632
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 7,
+                "img-width": 7
+            },
+            "layer": {
+                "features": 4096,
+                "params": 4096
+            }
+        },
+        {
+            "kernel": "ReLU",
+            "input": {
+                "elements": 1605632
+            },
+            "output": {
+                "elements": 1605632
+            },
+            "layer": {}
+        },
+        {
+            "kernel": "AdaptiveAvgPool2d",
+            "input": {
+                "batch-size": 16,
+                "in-channels": 2048,
+                "img-height": 7,
+                "img-width": 7,
+                "params": 1605632,
+                "non-zeros": 1019408
+            },
+            "output": {
+                "batch-size": 16,
+                "out-channels": 2048,
+                "img-height": 1,
+                "img-width": 1
+            },
+            "layer": {
+                "params": 0
+            }
+        },
+        {
+            "kernel": "Linear",
+            "input": {
+                "batch-size": 16,
+                "hidden-dim": 2048,
+                "params": 32768,
+                "non-zeros": 30629
+            },
+            "output": {
+                "batch-size": 16,
+                "output-dim": 1000
+            },
+            "layer": {
+                "hidden-dim": 2048,
+                "output-dim": 1000,
+                "params": 2049000
+            }
+        }
+    ]
+}

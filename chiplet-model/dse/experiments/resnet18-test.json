@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "dnn",
+            "model-instance": "resnet18",
+            "batch-size": 1
+        }
+    ],
+    "optimization-goal": "latency"
+}

@@ -1,0 +1,10 @@
+{
+    "workloads": [
+        {
+            "model": "test",
+            "model-instance": "test",
+            "batch-size": 64
+        }
+    ],
+    "optimization-goal": "latency"
+}
