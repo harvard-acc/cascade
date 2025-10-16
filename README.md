@@ -110,7 +110,7 @@ Each chiplet class in `chiplet-library/` extends a `base_chiplet` model implemen
 ## Repository Structure
 
 ```
-CASCADE/
+cascade-sim/
 │
 ├── dse/
 │   ├── chiplet-library/           # analytical chiplet models
